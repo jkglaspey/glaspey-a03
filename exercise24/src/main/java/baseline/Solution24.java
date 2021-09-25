@@ -15,16 +15,22 @@ public class Solution24 extends Anagram {
      */
 
         //declare strings A and B
-        String A;
-        String B;
+        String a;
+        String b;
+
+        //print introductory prompt
+        printIntro();
 
         //prompt the user to input data for A
-        A = getStringFromUser();
+        a = getStringFromUser();
+
         //prompt the user to input data for B
-        B = getStringFromUser();
+        b = getStringFromUser();
+
         //compare if A and B are anagrams
-        boolean anagram = isAnagram(A, B);
+        boolean anagram = isAnagram(a, b);
+
         //print the results
-        printAnagram(anagram, A, B);
+        printAnagram(anagram, a, b);
     }
 }
