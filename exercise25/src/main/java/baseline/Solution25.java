@@ -15,7 +15,7 @@ public class Solution25 {
             * A very strong password contains letters, numbers, and special characters and is at least eight characters.
          */
 
-        //ask user to input password for Password
+        //ask user to input password
 
         //create Password object (converts string to char array, and finds length)
         Password password = new Password(in.nextLine());

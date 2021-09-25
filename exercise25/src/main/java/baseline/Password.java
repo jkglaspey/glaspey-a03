@@ -30,7 +30,7 @@ public class Password {
     //create method that converts the password to an array of characters
     private static char[] toCharArray(String s) {
         //iterates a loop
-        //for the length of the array, convert the next character to a char and assign to the password array
+        //for the length of the array, convert the next character to char and assign to the password array
         return password;
     }
 
