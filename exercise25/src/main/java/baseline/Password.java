@@ -60,7 +60,7 @@ public class Password {
     }
 
     //create method that converts the password to an array of characters
-    private static char[] toCharArray(String s) {
+    public static char[] toCharArray(String s) {
 
         //create a char array
         char[] passwordArray = new char[s.length()];
@@ -75,7 +75,7 @@ public class Password {
     }
 
     //create method to determine if there are letters in the array
-    private boolean isLettersInPassword() {
+    public boolean isLettersInPassword() {
         //loop through password array
         //if there is an ASCII value of a letter, return true
         for(char c : string) {
@@ -87,7 +87,7 @@ public class Password {
     }
 
     //create method to determine if there are numbers in the array
-    private boolean isNumbersInPassword() {
+    public boolean isNumbersInPassword() {
         //loop through password array
         //if there is an ASCII value of a number, return true
         for(char c : string) {
@@ -99,7 +99,7 @@ public class Password {
     }
 
     //create method to determine if there are special characters in the array
-    private boolean isSpecialCharactersInPassword() {
+    public boolean isSpecialCharactersInPassword() {
         //loop through password array
         //if there is an ASCII value of a special character, return true
         for(char c : string) {

@@ -38,6 +38,7 @@ class PasswordTest extends Password {
     //test method that converts strings to char arrays
     //warning: this method only accepts strings
     //note: the length does not need to be predefined, it will use length().
+    //note: method is private unless for testing
     @Test
     void test_toCharArray() {
 
@@ -58,6 +59,7 @@ class PasswordTest extends Password {
     //test method that catches any letters in a char[] array
     //note: it catches both capital and lower case letters
     //note: it will not break on special characters
+    //note: method is private unless for testing
     @Test
     void test_isLettersInPassword() {
 
@@ -76,6 +78,7 @@ class PasswordTest extends Password {
 
     //test method that catches any numbers in a char[] array
     //note: it will not break on special characters
+    //note: method is private unless for testing
     @Test
     void test_isNumbersInPassword() {
 
@@ -91,6 +94,7 @@ class PasswordTest extends Password {
     //test method that catches any special characters in a char[] array
     //note: this includes spaces
     //note: the range excludes only numbers and letters. Every other char on the ascii table is valid
+    //note: method is private unless for testing
     @Test
     void test_isSpecialCharactersInPassword() {
 
