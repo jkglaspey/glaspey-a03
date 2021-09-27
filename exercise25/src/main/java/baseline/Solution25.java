@@ -5,7 +5,8 @@
 
 package baseline;
 
-public class Solution25 {
+public class Solution25 extends Password {
+
     public static void main(String[] args) {
         /*
         Create a program that determines the complexity of a given password based on these rules:
@@ -15,13 +16,12 @@ public class Solution25 {
             * A very strong password contains letters, numbers, and special characters and is at least eight characters.
          */
 
-        //ask user to input password
-
         //create Password object (converts string to char array, and finds length)
-        Password password = new Password(in.nextLine());
+        String temp = initialPrompt();
+        Password password = new Password(temp);
 
         //calculate the strength of the password
-        password.determinePasswordStrength();
+        passwordValidator(password);
 
         //print out the strength of the password
         password.printStrength();
