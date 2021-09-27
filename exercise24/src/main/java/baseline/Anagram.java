@@ -31,7 +31,7 @@ public abstract class Anagram {
     //create method to compare if Strings are anagrams
     public static boolean isAnagram(String a, String b) {
 
-        //create 2 character arrays of each string
+        //create 2 character arrays for each string
         char[] string1 = toCharArray(a);
         char[] string2 = toCharArray(b);
 
