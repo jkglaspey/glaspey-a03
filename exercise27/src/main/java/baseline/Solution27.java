@@ -5,7 +5,7 @@
 
 package baseline;
 
-public class Solution27 {
+public class Solution27 extends Input {
 
     public static void main(String[] args) {
 
@@ -21,13 +21,17 @@ public class Solution27 {
 
         //call a function that returns the user's first name
         String firstName = readFirstNameFromUser();
+
         //call a function that returns the user's last name
         String lastName = readLastNameFromUser();
+
         //call a function that returns the user's ZIP code
         String zipCode = readZIPCodeFromUser();
+
         //call a function that returns the user's Employee ID
         String employeeID = readEmployeeIDFromUser();
+
         //call method validateInput to determine errors with the user's inputs
-        input.validateInput(firstName,lastName,zipCode,employeeID);
+        validateInput(firstName,lastName,zipCode,employeeID);
     }
 }
