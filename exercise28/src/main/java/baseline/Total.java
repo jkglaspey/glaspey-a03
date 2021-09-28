@@ -8,29 +8,26 @@ public class Total {
     private static final Scanner in = new Scanner(System.in);
 
     //create instance variable for total
-    private int total = 1;
+    private int x = 0;
 
-    //create a public constructor containing an int total
-    public Total() {
-    }
+    //allow a default constructor to exist without declaration
 
     //create a method to get the current total
-    public int getTotal() { return total; }
+    public int getTotal() { return x; }
 
-    //create a method to loop a prompt for a variable amount of times (five)
-    public void askUserForInput() {
-        //loop five times
-        //ask user for input five times
-        //add user input to total five times
+    //create a method to ask the user for a number, then return that number
+    public static int askUserForInput() {
+        System.out.print("Enter a number: ");
+        return in.nextInt();
     }
-    
+
     //create a method to add an int to the total
     public void add(int x) {
-        //total + x
+        this.x += x;
     }
 
     //create method to print the total
     public void printTotal() {
-        //print total
+        System.out.printf("The total is %d", x);
     }
 }
