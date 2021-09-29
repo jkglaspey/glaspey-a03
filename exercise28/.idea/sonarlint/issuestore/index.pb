@@ -1,0 +1,12 @@
+
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+Q
+!src/main/java/baseline/Total.java,b\3\b304868f518368e6e464e2bc720d6b1b16dbb245
+U
+%src/test/java/baseline/TotalTest.java,4\6\46753de07de95cab0971458caa01bf6fdedb62ef
+V
+&src/main/java/baseline/Solution28.java,2\d\2dbeeb7846b800614d9a4335dc03943178e3e266
