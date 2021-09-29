@@ -1,0 +1,3 @@
+# Ignore specific paths
+/.gradle/
+/build/
