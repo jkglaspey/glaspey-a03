@@ -1,6 +1,11 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Joshua Glaspey
+ */
+
 package baseline;
 
-public class Solution31 {
+public class Solution31 extends Person {
 
     /*
     Create a program that prompts for your age and your resting heart rate. Use the Karvonen formula to determine the
