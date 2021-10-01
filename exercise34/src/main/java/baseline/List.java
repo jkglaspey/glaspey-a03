@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Joshua Glaspey
+ */
+
 package baseline;
 
 import java.util.Scanner;
@@ -10,16 +15,17 @@ public class List {
     //create instance variables
     private int size;
     private String[] names;
-    
+
     //create public constructor with list of names and size of list
     public List(int size) {
-        //initialize size
-        //initialize an array of size "size"
+        this.size = size;
+        names = new String[size];
     }
 
     //create default constructor
     public List() {
-        //default values
+        size = 1;
+        names = new String[] {""};
     }
 
     //create method to get size of array
@@ -33,7 +39,7 @@ public class List {
 
     //create method to set a new array size
     public void setSize(int i) {
-        this.size = 1;
+        this.size = i;
     }
 
     //create method to set a new list of names
@@ -41,30 +47,80 @@ public class List {
         this.names = names;
     }
 
+    //create a method to set a specific name in a list of names
+    public void setName(String name, int i) {
+        this.names[i] = name;
+    }
+
     //create method to print every name in a list
     public void printNames() {
-        //loop for the size of the list
+        System.out.printf("There are %d employees:%n",size);
+
         //print each name
+        for(int i = 0; i < size; i++) {
+            //try to print name, will print empty if there were duplicate names removed
+            if (names[i] != null) System.out.printf("%s%n", names[i]);
+        }
+
+        //add extra white space
+        System.out.print("\n");
     }
 
     //create method to ask user for a name to be deleted
     public static String askUserForName() {
         //ask user for name
+        System.out.print("Enter an employee name to remove: ");
+
+        //store value
+        String input = in.nextLine();
+
+        //add extra white space
+        System.out.println();
+
         //return name
+        return input;
     }
 
     //create method to delete the name from a list and save the list to the object
-    public void removeName(String name) {
+    public static void removeName(List names, String name) {
         //create a new String array of size "size-1"
-        //create int i = size and int j = size - 1
-        //loop through the array using i
-        //for each loop the name is not found:
-        //  increment j
-        //  List[i] = newList[j]
-        //if the name is found:
-        //  skip the name
-        //  do not increment j
-        //  set boolean for found to true
-        //if name was found, assign newList to names list and assign size - 1 to size
+        String[] newList = new String[names.getSize() - 1];
+
+        //create an int to store the new size (in case of duplicates)
+        int newSize = names.getSize();
+
+        //create index values
+        int i = 0;
+        int j = 0;
+
+        for(; i < names.getSize(); i++) {
+
+            //if the name is not found
+            if(!(names.getName(i).equalsIgnoreCase(name))) {
+
+                //try to increment j, but it might throw exception
+                try {
+                    newList[j] = names.getName(i);
+                    j++;
+                }
+
+                //the name is not found in the list
+                catch(ArrayIndexOutOfBoundsException e) {
+                    break;
+                }
+            }
+
+            //if the name was found, do not increment j
+
+            else {
+                newSize--;
+            }
+        }
+
+        //name was removed, return new list and fix size
+        if(names.getSize() != newSize) {
+            names.setNames(newList);
+            names.setSize(newSize);
+        }
     }
 }

@@ -5,7 +5,7 @@
 
 package baseline;
 
-public class Solution34 {
+public class Solution34 extends List {
 
     /*
     Create a small program that contains a list of employee names. Print out the list of names when the program runs the
@@ -17,13 +17,23 @@ public class Solution34 {
 
         //create new List object with size preset
         List names = new List(5);
+
         //add names to List
+        names.setName("John Smith",0);
+        names.setName("Jackie Jackson",1);
+        names.setName("Chris Jones",2);
+        names.setName("Amanda Cullen",3);
+        names.setName("Jeremy Goodwin",4);
+
         //print the list of names
         names.printNames();
+
         //ask user to enter a name to delete and store it in a string
         String name = askUserForName();
+
         //traverse list and remove that specific name
-        names.removeName(name);
+        removeName(names,name);
+
         //print the list of names
         names.printNames();
     }
