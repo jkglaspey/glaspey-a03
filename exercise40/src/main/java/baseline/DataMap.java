@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 3 Solutions
+ *  Copyright 2021 Joshua Glaspey
+ */
+
 package baseline;
 
 import java.util.List;
@@ -41,6 +46,11 @@ public class DataMap {
         //if not existent, return null
     }
 
+    //create a method to see if a string exists within another string
+    public static boolean stringExistsInsideString(String input, String s) {
+        //use built in string method contains() to return truth
+    }
+
     //create a method to print the beginning of a table
     public static void printTableHeading() {
         //print Name | Position | Separation Date
@@ -50,7 +60,8 @@ public class DataMap {
     //create a method to run through a map and print an entry who matches a string input
     public static void printFilteredTable(List<Map<String,Integer>> data, String s) {
         //loop through the size of one map
-        //for each entry, compare the string to the map data in both the names map
+        //for each entry, compare the string to the map data in both names maps
+        //a.k.a. use stringExistsInsideString
         //if it finds a match, print the entry into the table
         //if not, skip it
     }

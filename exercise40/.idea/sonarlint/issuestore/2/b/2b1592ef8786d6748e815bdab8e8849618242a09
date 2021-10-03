@@ -1,15 +1,0 @@
-
-C
-java:S1172$"&Remove these unused method parameters.(Õ™Ç­8¥¶İ¿Ä/
-e	java:S119$"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(Õ™Ç­8™Ú¿Ä/
-e	java:S119$"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(Õ™Ç­8šÚ¿Ä/
-H
-java:S1481&"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ8¦¶İ¿Ä/
-I
-java:S1068".Remove this unused "firstNames" private field.(¯Åôİûÿÿÿÿ
-H
-java:S1068"-Remove this unused "lastNames" private field.(³ùŒûÿÿÿÿ
-C
-java:S1068"-Remove this unused "positions" private field.(¬÷ã
-I
-java:S1068"3Remove this unused "separationDates" private field.(³¼æÑ
