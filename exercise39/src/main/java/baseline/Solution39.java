@@ -16,11 +16,12 @@ public class Solution39 extends DataMap {
     in a tabular format.
      */
 
-    public static void main(String args) {
+    public static void main(String[] args) {
         //initialize the maps in class DataMap
+        initializeMaps();
 
         //create a list of maps
-        List<Map<Integer,String>> data = new ArrayList<>();
+        List<Map<String,Integer>> data = new ArrayList<>();
 
         //add the data maps to the list
         data.add(getMap("firstNames"));
@@ -28,10 +29,10 @@ public class Solution39 extends DataMap {
         data.add(getMap("positions"));
         data.add(getMap("separationDates"));
 
-        //sort the data via a specific category (in this case last name)
-        sortMapsBasedOn(data,1);
+        //sort the data in a specific category (in this case last names) and replace that value
+        data.set(1,sortMap(data.get(1)));
 
-        //print the results in a table
-        printListAsTable(data);
+        //print the results in a table sorted by a map (last names)
+        printListAsTableBasedOnLastNames(data);
     }
 }
