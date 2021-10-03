@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Solution40 {
+public class Solution40 extends DataMap {
 
     /*
     Sorting records is helpful, but sometimes you need to filter down the results to find or display only what you’re
@@ -29,6 +29,9 @@ public class Solution40 {
         data.add(getMap("lastNames"));
         data.add(getMap("positions"));
         data.add(getMap("separationDates"));
+
+        //sort last names
+        data.set(1,sortMap(data.get(1)));
 
         //read user input and save string
         String input = getInputFromUser();
